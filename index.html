@@ -3,61 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plantilla de Sitio Web - Inicio</title>
+  <title>RecetasYa - Recetas de cocina organizadas</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <div>
-      <h1>Mi Sitio Genérico</h1>
-      <nav id="main-nav">
+    <div class="container">
+      <h1>RecetasYa</h1>
+      <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="page2.html">Acerca de</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <section>
-      <h2>Bienvenido a Nuestro Sitio Genérico</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <img src="img/imagen_1.svg" alt="Descripción de la imagen genérica 1">
+    <section class="main-section">
+      <div class="container">
+        <h2>Bienvenido a RecetasYa</h2>
+        <p>
+          Explorá nuestro catálogo organizado y descubrí, en segundos, platos que se adaptan a tu gusto, tu tiempo y los ingredientes que tengas a mano. Cocinar nunca fue tan simple y práctico.
+        </p>
+        <figure>
+          <img src="img/img_home.jpg" alt="Imágen de tres platos con comida">
+        </figure>
+      </div>
     </section>
-    <section>
-      <h2>Entradas Recientes</h2>
+    <section class="container popular-recipes">
+      <h2>Algunas recetas populares</h2>
       <article>
-        <h3>Entrada del Blog 1: Explorando Nuevos Horizontes</h3>
-        <p>
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <img src="img/imagen_2.svg" alt="Descripción de la imagen genérica 2">
-        <a href="#">Leer más...</a>
+        <div class="recipe-info">
+          <h3>Costillar al asador</h3>
+          <p>
+            Aprendé a preparar, de la mejor forma, una receta típica de la cocina argentina que reúne tradición, sabor y momentos únicos.
+          </p>
+          <a href="receta.html" class="button">Ver receta...</a>
+        </div>
+        <figure>
+          <img src="img/asado_640_480.jpg" alt="Imágen de carne asada">
+        </figure>
       </article>
       <article>
-        <h3>Entrada del Blog 2: La Importancia de la Innovación</h3>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <img src="img/imagen_3.svg" alt="Descripción de la imagen genérica 3">
-        <a href="#">Leer más...</a>
-      </article>
-      <article>
-        <h3>Entrada del Blog 3: Un Vistazo al Futuro</h3>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-        <img src="img/imagen_4.svg" alt="Descripción de la imagen genérica 4">
-        <a href="#">Leer más...</a>
+        <div class="recipe-info">
+          <h3>Milanesa Napolitana</h3>
+          <p>
+            Descubrí cómo cocinar una de las recetas más queridas de la cocina argentina: la milanesa napolitana, crocante, sabrosa y simplemente exquisita.
+          </p>
+          <a href="receta.html" class="button">Ver receta...</a>
+        </div>
+        <figure>
+          <img src="img/mila_napo_640_480.jpg" alt="Imágen de milanesa napolitana">
+        </figure>
       </article>
     </section>
   </main>
   <footer>
-    <div>
-      <p>&copy; 2025 Mi Sitio Genérico. Todos los derechos reservados.</p>
+    <div class="container">
+      <p>&copy; 2025 RecetasYa. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>

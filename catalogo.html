@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecetasYa - Catálogo de recetas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>RecetasYa</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="container">
+      <h2>Descubre recetas</h2>
+
+      <form class="filters">
+        <label for="comida" class="visually-hidden">Tipo de comida:</label>
+        <select id="comida">
+          <option value="" hidden>Selecciona tipo de comida</option>
+          <option value="principal">Almuerzo / Cena</option>
+          <option value="entrada">Entrada</option>
+          <option value="postre">Postre</option>
+        </select>
+        <label for="ingrediente" class="visually-hidden">Ingrediente principal:</label>
+        <select id="ingrediente">
+          <option value="" hidden>Selecciona ingrediente principal</option>
+          <option value="vacuna">Carne vacuna</option>
+          <option value="pollo">Pollo</option>
+          <option value="cerdo">Cerdo</option>
+          <option value="pescado">Pescado</option>
+          <option value="vegetariano">Vegetariano</option>
+        </select>
+        <label for="coccion" class="visually-hidden">Tipo de cocción:</label>
+        <select id="coccion">
+          <option value="" hidden>Selecciona tipo de cocción</option>
+          <option value="frito">Frito</option>
+          <option value="horno">Horno</option>
+          <option value="hbarro">Horno de barro</option>
+          <option value="parrilla">Parrilla</option>
+          <option value="hervido">Hervido</option>
+          <option value="salteado">Salteado</option>
+          <option value="plancha">A la plancha</option>
+        </select>
+        <label for="acompaniamiento" class="visually-hidden">Acompañamiento:</label>
+        <select id="acompaniamiento">
+          <option value="" hidden>Selecciona acompañamiento</option>
+          <option value="fritas">Papas fritas</option>
+          <option value="pure">Puré</option>
+          <option value="ensalada">Ensalada</option>
+          <option value="arroz">Arroz</option>
+          <option value="fideos">Fideos</option>
+          <option value="nada">Sin acompañamiento</option>
+        </select>
+      </form>
+
+      <div class="grid">
+        <article class="card">
+          <figure>
+            <img src="img/asado_640_480.jpg" alt="Imágen de carne asada">
+          </figure>
+          <div>
+            <h2>Costillar al asador</h2>
+            <div class="card-data">
+              <p>
+                <strong>Dificultad media</strong>
+              </p>
+              <p>
+                <strong>1h 30min aprox.</strong>
+              </p>
+            </div>
+            <a href="receta.html">Ver receta...</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="img/mila_napo_640_480.jpg" alt="Imágen de milanesa napolitana">
+          </figure>
+          <div>
+            <h2>Milanesa Napolitana</h2>
+            <div class="card-data">
+              <p>
+                <strong>Dificultad baja</strong>
+              </p>
+              <p>
+                <strong>50min aprox.</strong>
+              </p>
+            </div>
+            <a href="receta.html">Ver receta...</a>
+          </div>
+        </article> 
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RecetasYa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
