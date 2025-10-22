@@ -29,8 +29,8 @@ main {
 }
 
 h1 {
-  text-align: center;
   color: var(--white);
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -55,8 +55,55 @@ p {
   margin-bottom: 0.5rem;
 }
 
-header {
+body > header {
   background-color: var(--primary-color);
+  height: 3.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px var(--secondary-color);
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-menu {
+  color: var(--white);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 4px var(--secondary-color);
+  scale: 0;
+  transform-origin: top right;
+  transition: scale 0.3s ease-in-out, display 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.nav-open {
+  display: block;
+  scale: 1;
+
+  @starting-style {
+    scale: 0;
+  }
 }
 
 nav a {
@@ -166,10 +213,6 @@ footer p {
 }
 
 /* RECETA */
-
-.recipe header {
-  background-color: transparent;
-}
 
 .recipe header figure {
   margin-bottom: 0.5rem;

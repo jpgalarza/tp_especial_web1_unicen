@@ -8,9 +8,17 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-container">
       <h1>RecetasYa</h1>
-      <nav>
+      <button 
+        class="toggle-menu"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        &#9776;
+      </button>
+      <nav id="main-nav">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
@@ -64,5 +72,6 @@
       <p>&copy; 2025 RecetasYa. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
