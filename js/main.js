@@ -25,14 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
       menuToggleBtn.setAttribute("aria-expanded", "false");
       menuToggleBtn.innerHTML = "&#9776;";
       menuToggleBtn.setAttribute("aria-label", "Abrir menú de navegación");
-    }
-
-    if(window.innerWidth < 576) {
-      menu.classList.add("transition-none");
+    }else {
+       menu.classList.add("transition-none");
 
       setTimeout(() => {
         menu.classList.remove("transition-none");
       }, 0);
+      
     }
   })
 

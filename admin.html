@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecetasYa - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>RecetasYa</h1>
+      <button 
+        class="toggle-menu"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        &#9776;
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="container">
+       <h2>Administrador de Recetas</h2>
+      <form id="data-form">
+        <label for="recipe-title">Título de receta:
+          <input type="text" id="recipe-title" placeholder="Ej. Pizza napolitana" required>
+        </label>
+        <label for="recipe-level">Nivel:
+          <select id="recipe-level">
+            <option value="Bajo">Bajo</option>
+            <option value="Medio">Medio</option>
+            <option value="Alto">Alto</option>
+          </select>
+        </label>
+        <label for="recipe-time">Tiempo (min):
+          <input type="number" id="recipe-time" placeholder="Ej. 30" required>
+        </label>
+        <label for="img-url">URL de Imágen:
+        <input type="text" id="img-url" placeholder="Ej. https//..." required>
+        </label>
+        <button type="submit" id="add-item-btn" class="button add-btn">
+          Agregar
+        </button>
+        <button type="submit" id="update-item-btn" class="button btn-success display-none">
+          Actualizar
+        </button>
+        <button type="reset" class="button btn-cancel">
+          Cancelar
+        </button>
+      </form>
+      <div id="status-message" class="hidden">Mensaje a mostrar</div>
+    </section>
+    <section class="container">
+      <h2>Listado de recetas</h2>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Nivel</th>
+            <th>Tiempo</th>
+            <th>Imágen</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RecetasYa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+      <h3>¿Está seguro de que desea eliminar esta receta?</h3>
+      <div class="modal-buttons">
+        <button class="button btn-danger">Sí, eliminar</button><!-- confirm-btn -->
+        <button class="button btn-cancel">Cancelar</button><!-- cancel-btn -->
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+#data-form .button {
+  margin: 0;
+}
+
+/* Estilos para mensajes de estado */
+#status-message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#status-message.error {
+  color: #e74c3c;
+  background-color: #ffebeb;
+}
+
+#status-message.success {
+  color: #27ae60;
+  background-color: #ebfaeb;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Estilos de tabla */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden; /* Para que los bordes redondeados se apliquen bien */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+th, td {
+  padding: 0.25rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+th:nth-child(1), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6) { 
+  width: 1%;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+/* th:first-child { border-top-left-radius: 0.75rem; }
+th:last-child { border-top-right-radius: 0.75rem; } //TODO: NO ES NECESARIO
+ */
+
+td.empty {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0; /* Rayado para filas pares */
+}
+
+.table-actions button {
+  padding: 0.2rem 0.5rem;
+  height: auto;
+}
+
+
+/* Estilos para el modal de confirmación */
+.modal {
+  display: none;
+  position: fixed; /* Permanece en su lugar incluso al hacer scroll */
+  z-index: 1001; /* Por encima de todo lo demás */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilitar scroll si es necesario */
+  background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho responsivo */
+  max-width: 500px; /* Ancho máximo */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 576px) { 
+  th:nth-child(6) { 
+    width: 9.5rem;
+  }
+
+  th {
+    padding: 0.5rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) { 
+  th {
+    padding: 0.75rem;
+  }
+
+  th:nth-child(3), th:nth-child(4), th:nth-child(5) { 
+    width: 5rem;
+  }
+
+  th:nth-child(6) { 
+    width: 11rem;
+  }
+
+  td:nth-child(2) {
+    padding-left: 1%;
+  }
+
+  .table-actions button {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+
+@media screen and (min-width: 992px) { 
+
+  #data-form {
+    grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr;
+    align-items: flex-end;
+  }
+
+  th:nth-child(1) {
+    width: 3rem;
+  }
+
+  th:nth-child(3), th:nth-child(4) { 
+    width: 9rem;
+  }
+
+  td:nth-child(5) {
+    width: 7rem; 
+    padding: 0.3rem 0.5rem;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  th:nth-child(1) {
+    width: 4rem;
+  }
+
+  th:nth-child(3), th:nth-child(4) {
+    width: 13rem;
+  }
+
+  th:nth-child(5) { 
+    width: 9rem;
+  }
+}
